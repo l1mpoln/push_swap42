@@ -6,7 +6,7 @@
 #    By: vkuzmin <vkuzmin@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/05 21:39:49 by vkuzmin           #+#    #+#              #
-#    Updated: 2023/01/05 21:43:03 by vkuzmin          ###   ########.fr        #
+#    Updated: 2023/01/05 21:58:46 by vkuzmin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ EXTLIB		= includes/libft
 SRCS		= main.c \
 			  add_indexes.c check_sorted.c commands.c \
 			  inp_check.c input_checker.c main.c push_back.c \
-			  sort_five.c sort_four.c sort_three.c sorting.c swap.c
+			  sort_five.c sort_four.c sort_three.c sorting.c swap.c \
+			  free_stack.c 
 
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror

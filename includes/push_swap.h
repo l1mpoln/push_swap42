@@ -6,7 +6,7 @@
 /*   By: vkuzmin <vkuzmin@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:18:02 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/05 18:04:23 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/05 21:58:26 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void my_sort(t_stack **head_a, t_stack **head_b);
 void sorting(t_stack **head_a, t_stack **head_b, int len);
 void sort_four(t_stack **head_a, t_stack **head_b);
 void sort_five(t_stack **head_a, t_stack **head_b);
-
+void free_stack(t_stack **head_a);
 #endif

@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkuzmin <vkuzmin@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 13:17:54 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/05 21:52:15 by vkuzmin          ###   ########.fr       */
+/*   Created: 2023/01/05 21:52:21 by vkuzmin           #+#    #+#             */
+/*   Updated: 2023/01/05 21:57:49 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int argc, char **argv)
+void free_stack(t_stack **head_a)
 {
-    t_stack *stack_a;
-    t_stack *stack_b;
+    t_stack *cursor = *head_a;
+    t_stack *next;
     
-    stack_a = NULL;
-    stack_b = NULL;
-    if (argc < 2)
-        return (0);
-    if (!inp_check(argc, argv))
-        return (0);
-    push_back(&stack_a, argc, argv);
-    add_indexes(&stack_a);
-    swap(&stack_a, &stack_b);
-    free_stack(&stack_a);
-    return (0);
+    while (cursor != NULL)
+    {
+        next = cursor -> next;
+        free(cursor);
+        cursor = next;
+    }
+    *head_a = NULL;
 }
