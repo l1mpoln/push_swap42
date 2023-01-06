@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 19:55:09 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/06 11:48:05 by vkuzmin          ###   ########.fr       */
+/*   Created: 2023/01/06 11:58:01 by vkuzmin           #+#    #+#             */
+/*   Updated: 2023/01/06 12:00:59 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	sort_three(t_stack **stack_a)
+int	check_int(int argc, char **argv)
 {
-	t_stack	*last;
-	t_stack	*first;
-	t_stack	*middle;
+	int		i;
+	long	tmp;
 
-	last = (*stack_a)->next->next;
-	first = *stack_a;
-	middle = (*stack_a)->next;
-	if (first -> number > first -> next ->number)
-		swap_a(stack_a);
-	if (middle -> number > last -> number)
-		reverse_rotate_a(stack_a);
-	if ((*stack_a)->number > first -> number)
-		swap_a(stack_a);
+	i = 1;
+	while (i < argc)
+	{
+		tmp = ft_atoi(argv[i]);
+		if (tmp < -2147483648 || tmp > 2147483647)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	check_duplicates(int argc, char **argv)
+{
+	int	*numbers;
+
+	numbers = malloc(sizeof(int) * (argc - 1));
+	if (!numbers)
+		return (0);
+	fill_numbers(argc, argv, numbers);
+	if (!check(argc, numbers))
+		return (0);
+	free(numbers);
+	return (1);
 }
