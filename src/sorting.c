@@ -6,31 +6,18 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:16:57 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/06 11:45:44 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/06 15:01:43 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	find_n(int len, int n)
-{
-	if (len == 100)
-		n = 15;
-	if (len == 500)
-		n = 30;
-	if (len == 9)
-		n = 3;
-	else
-		n = 1;
-}
-
-void	fill_b(t_stack **head_a, t_stack **head_b, int len)
+void	fill_b(t_stack **head_a, t_stack **head_b)
 {
 	int	counter;
 	int	n;
 
-	n = 0;
-	find_n(len, n);
+	n = 15;
 	counter = 0;
 	while ((*head_a) != NULL)
 	{
@@ -91,6 +78,6 @@ void	transfer_to_a(t_stack **head_a, t_stack **head_b, int len)
 
 void	sorting(t_stack **head_a, t_stack **head_b, int len)
 {
-	fill_b(head_a, head_b, len);
+	fill_b(head_a, head_b);
 	transfer_to_a(head_a, head_b, len);
 }
