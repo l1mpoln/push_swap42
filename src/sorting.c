@@ -6,18 +6,29 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 19:16:57 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/06 15:01:43 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/11 12:32:03 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int	find_n(t_stack **head_a)
+{
+	if (count_stack(*head_a) == 500)
+		return (30);
+	if (count_stack(*head_a) == 100)
+		return (15);
+	else
+		return (1);
+}
 
 void	fill_b(t_stack **head_a, t_stack **head_b)
 {
 	int	counter;
 	int	n;
 
-	n = 15;
+	n = 0;
+	n = find_n(head_a);
 	counter = 0;
 	while ((*head_a) != NULL)
 	{
