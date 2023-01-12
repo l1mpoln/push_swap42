@@ -6,7 +6,7 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:18:02 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/06 12:17:36 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/12 16:02:12 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,18 @@ int		check_duplicates(int argc, char **argv);
 int		check_int(int argc, char **argv);
 void	fill_numbers(int argc, char **argv, int *numbers);
 int		check(int argc, int *numbers);
+
+/* freaking thing*/
+int		work_one_line(char *str, t_stack **head_a);
+int		check_strings(char *str);
+int		check_zeros(char *argv);
+int		inp_check_for_one(int argc, char **argv);
+int		input_checker_for_one(int argc, char **argv);
+int		check_duplicates_for_one(int argc, char **argv);
+void	fill_numbersss(int argc, char **argv, int *numbers);
+int		checkkk(int argc, int *numbers);
+int		check_int_for_one(int argc, char **argv);
+int		check_sorted_for_one(int argc, char **argv);
+void	push_back_for_one(t_stack **head, int argc, char **argv);
+
 #endif

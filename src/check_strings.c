@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_strings.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 13:17:54 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/12 16:08:03 by vkuzmin          ###   ########.fr       */
+/*   Created: 2023/01/12 14:09:11 by vkuzmin           #+#    #+#             */
+/*   Updated: 2023/01/12 14:44:05 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+int	is_numberr(char *str)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	int	i;
 
-	stack_a = NULL;
-	stack_b = NULL;
-	if (argc < 2)
-		return (0);
-	if (argc == 2)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (!work_one_line(argv[1], &stack_a))
+		if (!ft_isdigit(str[i]))
 			return (0);
-		add_indexes(&stack_a);
-		swap(&stack_a, &stack_b);
-		free_stack(&stack_a);
-		return (0);
+		else
+			i++;
 	}
-	if (!inp_check(argc, argv))
+	return (1);
+}
+
+int	check_strings(char *str)
+{
+	int	i;
+
+	i = 0;
+	printf("%s\n", str);
+	if (!is_numberr(str))
 		return (0);
-	push_back(&stack_a, argc, argv);
-	add_indexes(&stack_a);
-	swap(&stack_a, &stack_b);
-	free_stack(&stack_a);
-	return (0);
+	return (1);
 }

@@ -6,7 +6,7 @@
 #    By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/05 21:39:49 by vkuzmin           #+#    #+#              #
-#    Updated: 2023/01/06 14:18:27 by vkuzmin          ###   ########.fr        #
+#    Updated: 2023/01/12 16:02:26 by vkuzmin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SRCS		= main.c \
 			  inp_check.c input_checker.c main.c push_back.c \
 			  sort_five.c sort_four.c sort_three.c sorting.c swap.c \
 			  free_stack.c utils.c commands1.c commands2.c \
+			  work_one_line.c check_strings.c inp_check_for_one.c \
+			  input_checker_for_one.c check_sorted_for_one.c \
+			  push_back_for_one.c 
 
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror

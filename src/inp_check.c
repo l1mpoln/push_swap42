@@ -6,7 +6,7 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 16:54:13 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/06 12:04:17 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/12 15:42:37 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ int	inp_check(int argc, char **argv)
 		ft_putstr_fd("Error\n", 2);
 		return (0);
 	}
-	if (!check_sorted(argc, argv))
+	if (!check_sorted_for_one(argc, argv))
+	{
+		printf("sorted");
 		return (0);
+	}
 	return (1);
 }
