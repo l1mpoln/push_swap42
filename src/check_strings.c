@@ -6,7 +6,7 @@
 /*   By: vkuzmin <vkuzmin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:09:11 by vkuzmin           #+#    #+#             */
-/*   Updated: 2023/01/12 14:44:05 by vkuzmin          ###   ########.fr       */
+/*   Updated: 2023/01/15 15:57:45 by vkuzmin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	check_strings(char *str)
 	int	i;
 
 	i = 0;
-	printf("%s\n", str);
 	if (!is_numberr(str))
 		return (0);
 	return (1);
